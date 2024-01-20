@@ -111,7 +111,7 @@ func (b *bench) Run() {
 }
 
 func (b *bench) LaunchTask(numRequest uint, t task) {
-	req, err := http.NewRequest(t.method, t.url, nil)
+	req, err := http.NewRequest(t.method, t.url, t.data)
 
 	if err != nil {
 		return
